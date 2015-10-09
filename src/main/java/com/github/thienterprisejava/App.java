@@ -6,6 +6,8 @@ package com.github.thienterprisejava;
  */
 public class App 
 {
+    // inspired by http://9gag.com/gag/aEzODLx
+
     public static void main( String[] args )
     {
         for (int i =0; i < 10; ++i)

@@ -10,29 +10,18 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+
+    public long fib(int n) {
+        if(n <= 2)
+            return 1;
+        return fib(n - 1) + fib(n - 2);
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    public static void main(String... args) {
+        AppTest fibonacci = new AppTest();
+        for(int n = 1; n < Integer.parseInt(args[0]); n++)
+            System.out.printf("fib(%d) = %d%n", n, fibonacci.fib(n));
     }
 }
+
+
